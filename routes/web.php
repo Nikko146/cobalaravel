@@ -33,3 +33,9 @@ Route::get('/blog', function () {
 	}
 	echo '</ul>';
 });
+
+Route::get('/post/{$id}', function($id) {
+	echo "Post $id";
+	echo "</br>";
+	echo "Body post in ID $id";
+});
