@@ -20,6 +20,7 @@ Route::get('/about', function() {
 });
 
 Route::get('/blog', 'PostController@index');
+Route::get('/post/controller', 'PostController@create');
 
 Route::get('/post/{id}', ['as' => 'post.detail', function($id) {
 	echo "Post $id";
