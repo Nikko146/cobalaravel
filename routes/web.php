@@ -12,5 +12,30 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/about');
 });
+
+Route::get('/about', function() {
+	return 'Hi, This about page';
+});
+
+Route::get('/blog', function () {
+	$posts = [
+		['id' => '1', 'title' => 'post 1', 'body' => 'Body post in ID 1'],
+		['id' => '2', 'title' => 'post 2', 'body' => 'Body post in ID 2'],
+		['id' => '3', 'title' => 'post 3', 'body' => 'Body post in ID 3'],
+		['id' => '4', 'title' => 'post 4', 'body' => 'Body post in ID 4'],
+	];
+
+	echo '<ul>';
+	foreach ($posts as $post) {
+		echo '<li> <a href=" ' . route('post.detail', $post['id']) .'"> '. $post['title'] . '</a></li>';
+	}
+	echo '</ul>';
+});
+
+Route::get('/post/{id}', ['as' => 'post.detail', function($id) {
+	echo "Post $id";
+	echo "</br>";
+	echo "Body post in ID $id";
+}]);
