@@ -17,3 +17,7 @@ Route::get('/', function () {
     $c = $a + $b;
     return $c;
 });
+
+Route::get('/about', function() {
+	return 'Hi, This about page';
+})
