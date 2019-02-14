@@ -12,12 +12,9 @@
 */
 
 Route::get('/', function () {
-    $a = 1;
-    $b = 2;
-    $c = $a + $b;
-    return $c;
+    return redirect('/about');
 });
 
 Route::get('/about', function() {
 	return 'Hi, This about page';
-})
+});
