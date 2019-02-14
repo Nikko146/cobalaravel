@@ -21,6 +21,7 @@ Route::get('/about', function() {
 
 Route::get('/blog', function () {
 	$posts = [
-		['title' => 'post 1', 'body 1' => 'Body post in ID 1']
+		['title' => 'post 1', 'body 1' => 'Body post in ID 1'],
+		['title' => 'post 2', 'body 1' => 'Body post in ID 2']
 	];
 });
