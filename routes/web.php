@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::get('/about', function() {
 	return 'Hi, This about page';
 });
+
+Route::get('/blog', function () {
+	$posts = [
+		
+	];
+});
