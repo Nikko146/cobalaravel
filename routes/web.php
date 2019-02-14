@@ -29,7 +29,7 @@ Route::get('/blog', function () {
 
 	echo '<ul>';
 	foreach ($posts as $post) {
-		echo '<li> <a href=""> '. $post['title'] . '</li>';
+		echo '<li> <a href="/post' . $post['id'] .'"> '. $post['title'] . '</li>';
 	}
 	echo '</ul>';
 });
