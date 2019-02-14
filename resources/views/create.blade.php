@@ -8,6 +8,7 @@
 	<h1>Halaman Create Post</h1>
 
 	<form action="http://localhost/laravel/cobalaravel/public/post/store" method="post">
+		{{ csrf_field() }}
 		<label for="title">Title</label>
 		<input type="text" name="title" id="title">
 		<br>
