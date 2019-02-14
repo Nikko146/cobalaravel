@@ -21,10 +21,10 @@ Route::get('/about', function() {
 
 Route::get('/blog', function () {
 	$posts = [
-		['title' => 'post 1', 'body' => 'Body post in ID 1'],
-		['title' => 'post 2', 'body' => 'Body post in ID 2'],
-		['title' => 'post 3', 'body' => 'Body post in ID 3'],
-		['title' => 'post 4', 'body' => 'Body post in ID 4'],
+		['id' => '1', 'title' => 'post 1', 'body' => 'Body post in ID 1'],
+		['id' => '2', 'title' => 'post 2', 'body' => 'Body post in ID 2'],
+		['id' => '3', 'title' => 'post 3', 'body' => 'Body post in ID 3'],
+		['id' => '4', 'title' => 'post 4', 'body' => 'Body post in ID 4'],
 	];
 
 	echo '<ul>';
