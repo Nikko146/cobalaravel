@@ -21,6 +21,7 @@ Route::get('/about', function() {
 
 Route::get('/blog', 'PostController@index');
 Route::get('/post/create', 'PostController@create');
+Route::get('/post/store', 'PostController@store');
 
 Route::get('/post/{id}', ['as' => 'post.detail', function($id) {
 	echo "Post $id";
