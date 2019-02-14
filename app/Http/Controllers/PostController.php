@@ -20,4 +20,8 @@ class PostController extends Controller
 	}
 	echo '</ul>';
     }
+
+    public function create() {
+    	return view('create');
+    }
 }
