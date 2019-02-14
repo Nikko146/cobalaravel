@@ -29,12 +29,12 @@ Route::get('/blog', function () {
 
 	echo '<ul>';
 	foreach ($posts as $post) {
-		echo '<li> <a href="/post' . $post['id'] .'"> '. $post['title'] . '</li>';
+		echo '<li> <a href="post/' . $post['id'] .'"> '. $post['title'] . '</a></li>';
 	}
 	echo '</ul>';
 });
 
-Route::get('/post/{$id}', function($id) {
+Route::get('/post/{id}', function($id) {
 	echo "Post $id";
 	echo "</br>";
 	echo "Body post in ID $id";
