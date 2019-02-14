@@ -26,4 +26,10 @@ Route::get('/blog', function () {
 		['title' => 'post 3', 'body' => 'Body post in ID 3'],
 		['title' => 'post 4', 'body' => 'Body post in ID 4'],
 	];
+
+	echo '<ul>';
+	foreach ($posts as $post) {
+		echo "<li>" . $post['title'] . '</li>';
+	}
+	echo '</ul>';
 });
