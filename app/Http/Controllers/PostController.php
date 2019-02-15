@@ -53,7 +53,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        return 'Ini Halaman show dengan id' . $id;
+        return 'Ini Halaman show dengan id ' . $id;
     }
 
     /**
