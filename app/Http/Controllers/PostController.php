@@ -13,7 +13,13 @@ class PostController extends Controller
      */
     public function index()
     {
-        return 'Hi, ini method index dalam PostController';
+        $posts = {
+            ['id' => '1', 'title' => 'Post title 1', 'body' => 'Post Body 1'],
+            ['id' => '2', 'title' => 'Post title 2', 'body' => 'Post Body 2'],
+            ['id' => '3', 'title' => 'Post title 3', 'body' => 'Post Body 3'],
+            ['id' => '4', 'title' => 'Post title 4', 'body' => 'Post Body 4'],
+            ['id' => '5', 'title' => 'Post title 5', 'body' => 'Post Body 5'],
+        }
     }
 
     /**
