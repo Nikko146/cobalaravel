@@ -19,8 +19,9 @@ class PostController extends Controller
             ['id' => '3', 'title' => 'Post title 3', 'body' => 'Post Body 3'],
             ['id' => '4', 'title' => 'Post title 4', 'body' => 'Post Body 4'],
             ['id' => '5', 'title' => 'Post title 5', 'body' => 'Post Body 5'],
-            ];
-        }
+        ];
+
+        return view('index', compact('posts'));
     }
 
     /**
