@@ -1,9 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Posts Page</title>
-</head>
-<body>
+@extends('layout.app')
+
+@section('title')
+	Halaman Data Post
+@stop
+
+@section('body')
 	<h1>Halaman Post</h1>
 	@if(count($posts) > 0)
 		<ul>
@@ -14,5 +15,4 @@
 		@else
 		<p>Tidak ada data</p>
 	@endif
-</body>
-</html>
+@stop

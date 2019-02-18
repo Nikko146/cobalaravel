@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Halaman Create Post</title>
-</head>
-<body>
+@extends('layout.app')
 
+@section('title')
+	Halaman Create Post
+@endsection
+
+@section('body')
 	<h1>Halaman Create Post</h1>
 
 	<form action="{{ route('post.store')}}" method="post">
@@ -17,6 +17,4 @@
 		<br>
 		<button type="submit">Submit</button>
 	</form>
-
-</body>
-</html>
+@endsection
