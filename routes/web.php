@@ -47,3 +47,8 @@ Route::get('/read', function () {
 	$query = DB::table('posts')->SELECT('title', 'body')->WHERE('id', 1)->get();
 	return var_dump($query);
 });
+
+Route::get('/update', function(){
+	$updated = DB::update('UPDATE posts SET title= "Update field title" WHERE id = ?', [1]);
+	return $updated;
+});
