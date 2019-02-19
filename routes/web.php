@@ -1,4 +1,4 @@
-<?php
+<?php use App\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,4 +62,14 @@ Route::get('/delete', function () {
 	// $delete = DB::delete('DELETE FROM posts WHERE id = ?', [1]);
 	$delete = DB::table('posts')->where('id', 2)->delete();
 	echo "Data Berhasil dihapus";
+});
+
+Route::get('/posts', function() {
+	$posts = Post::all();
+	return $posts;
+});
+
+Route::get('/find', function (){
+	$post = Post::find(5);
+	return $post;
 });
