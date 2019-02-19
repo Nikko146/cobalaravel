@@ -31,6 +31,13 @@ Route::get('/blog', 'PostController@index');
 
 Route::resource('post', 'PostController');
 Route::get('/insert' ,function () {
-	DB::insert('INSERT INTO posts (title, body, user_id) VALUES (?,?,?)', ['Belajar PHP dengan Laravel', 'Laravel the best framework', '1']);
+	// DB::insert('INSERT INTO posts (title, body, user_id) VALUES (?,?,?)', ['Belajar PHP dengan Laravel', 'Laravel the best framework', '1']);
+
+	$data = [
+		'title' => 'Disini isian title',
+		'body' => 'Isian body untuk table posts',
+		'user_id' => 2
+	];
+	DB::table('posts')->insert($data);
 	echo "Data berhasil ditambah";
 });
