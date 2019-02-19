@@ -30,3 +30,7 @@ Route::get('/blog', 'PostController@index');
 // }]);
 
 Route::resource('post', 'PostController');
+Route::get('/insert' ,function () {
+	DB::insert('INSERT INTO posts (title, body, user_id) VALUES (?,?,?)', ['Belajar PHP dengan Laravel', 'Laravel the best framework', '1']);
+	echo "Data berhasil ditambah";
+});
