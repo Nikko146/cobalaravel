@@ -49,6 +49,11 @@ Route::get('/read', function () {
 });
 
 Route::get('/update', function(){
-	$updated = DB::update('UPDATE posts SET title= "Update field title" WHERE id = ?', [1]);
-	return $updated;
+	// $updated = DB::update('UPDATE posts SET title= "Update field title" WHERE id = ?', [1]);
+	$data = [
+		'title' => 'Isian title',
+		'body' => 'Isian body baru'
+	];
+	$updated = DB::table('posts')->where('id', 1)->update($data);
+	echo "Data berhasil diupdate";
 });
