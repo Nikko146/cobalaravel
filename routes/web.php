@@ -57,3 +57,9 @@ Route::get('/update', function(){
 	$updated = DB::table('posts')->where('id', 1)->update($data);
 	echo "Data berhasil diupdate";
 });
+
+Route::get('/delete', function () {
+	// $delete = DB::delete('DELETE FROM posts WHERE id = ?', [1]);
+	$delete = DB::table('posts')->where('id', 2)->delete();
+	echo "Data Berhasil dihapus";
+});
