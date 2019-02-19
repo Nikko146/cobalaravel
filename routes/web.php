@@ -43,6 +43,7 @@ Route::get('/insert' ,function () {
 });
 
 Route::get('/read', function () {
-	$query = DB::select('SELECT * FROM posts WHERE id= ?', [1]);
+	// $query = DB::select('SELECT * FROM posts WHERE id= ?', [1]);
+	$query = DB::table('posts')->SELECT('title', 'body')->WHERE('id', 1)->get();
 	return var_dump($query);
 });
