@@ -88,3 +88,13 @@ Route::get('/create', function () {
 	$post->save();
 	echo "Data Berhasil di buat";
 });
+
+
+Route::get('/createpost', function () {
+	$post = Post::create([
+		'title' => 'Create data dari method create',
+		'body' => 'kita isi dengan isian post dari create method',
+		'user_id' => 4
+	]);
+	echo "Data Berhasil Dibuat";
+});
