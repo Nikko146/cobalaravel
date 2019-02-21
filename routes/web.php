@@ -78,3 +78,13 @@ Route::get('/findwhere', function () {
 	$posts = Post::where('user_id', 2)->orderBy('id', 'desc')->take(1)->get();
 	return $posts;
 });
+
+Route::get('/create', function () {
+	$post = new Post();
+	$post->title = 'Isi Judul Postingan';
+	$post->body = 'Isian Body dari Postingan';
+	$post->user_id = 3;
+
+	$post->save();
+	echo "Data Berhasil di buat";
+});
