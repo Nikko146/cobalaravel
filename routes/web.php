@@ -111,7 +111,10 @@ Route::get('updatepost', function () {
 });
 
 Route::get('/deletepost', function () {
-	$post = Post::find(7);
-	$post->delete();
+	// $post = Post::find(7);
+	// $post->delete();
+	// echo "Data berhasil dihapus";
+
+	Post::destroy(14);
 	echo "Data berhasil dihapus";
 });
