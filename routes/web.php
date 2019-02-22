@@ -98,3 +98,14 @@ Route::get('/createpost', function () {
 	]);
 	echo "Data Berhasil Dibuat";
 });
+
+Route::get('updatepost', function (){
+	$post = Post::find(4);
+	$post->update(
+	[
+		'title' => 'Titlenya diganti',
+		'body' => 'Bodynya di update',
+		'user_id' => 4
+	]);
+	echo "Data Berhasil diupdate";
+});
