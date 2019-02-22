@@ -99,7 +99,7 @@ Route::get('/createpost', function () {
 	echo "Data Berhasil Dibuat";
 });
 
-Route::get('updatepost', function (){
+Route::get('updatepost', function () {
 	$post = Post::find(4);
 	$post->update(
 	[
@@ -108,4 +108,10 @@ Route::get('updatepost', function (){
 		'user_id' => 4
 	]);
 	echo "Data Berhasil diupdate";
+});
+
+Route::get('/deletepost', function () {
+	$post = Post::find(7);
+	$post->delete();
+	echo "Data berhasil dihapus";
 });
