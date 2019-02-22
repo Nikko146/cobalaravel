@@ -118,3 +118,7 @@ Route::get('/deletepost', function () {
 	Post::destroy(14);
 	echo "Data berhasil dihapus";
 });
+
+Route::get('/softdelete', function () {
+	Post::destroy(17);
+});
